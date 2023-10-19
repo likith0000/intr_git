@@ -1,0 +1,16 @@
+df.shape
+df.isnull()
+df.isnull().sum()
+df.isnull().sum().sum()
+df2=df.fillna(value=df['balcony'].max())
+df2
+df3=df.dropna
+df3
+df4=df.dropna(how='all')
+df4
+
+import numpy as np
+df5=df.replace(to_replace=np.nan,value=875465)
+df5
+df_balcony=df['balcony'].interpolate(method='linear')
+df

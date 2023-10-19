@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+iris=pd.read_csv("C:\\Users\\likith\\Desktop\\DATASETS\\iris.csv")
+fig=iris[iris.variety=='Setosa'].plot.scatter(x='petal.length',y='petal.width',color='orange',label='Setosa')
+iris[iris.variety=='Versicolor'].plot.scatter(x='petal.length',y='petal.width',color='blue',label='Versicolor',ax=fig)
+iris[iris.variety=='Virginica'].plot.scatter(x='petal.length',y='petal.width',color='green',label='Virginica',ax=fig)
+fig.set_xlabel("petal.length")
+fig.set_ylabel("petal.width")
+fig.set_title("petal length and width")
+fig=plt.gcf()
+fig.set_size_inches(12,8)
+plt.show()
